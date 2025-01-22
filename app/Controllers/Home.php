@@ -280,7 +280,7 @@ public function filteruserlog() {
 
 public function LogActivity(){
     $model = new M_z();
-    $where1 = array('activity.delete' => '0');
+    $where1 = array('activity.delete' => null);
     $data['log'] = $model->join1where1('activity','user','activity.id_user = user.id_user',$where1);
     $data['menus'] = $model->tampil('menu');
     $data['users'] = $model->tampil('user');
@@ -289,7 +289,7 @@ public function LogActivity(){
     $where6 = array('level' => session()->get('level'));
         $data['menu'] = $model->getwhere('menu', $where6);
         $this->log_activity('User membuka Setting Website');
-        if ($data['menu']->datas == 1) {
+        if ($data['menu']->datamaster == 1) {
     echo view('header', $data);
     echo view('menu', $data);
     echo view('activitylog', $data);
@@ -717,6 +717,23 @@ $where = array('id_kategori' => $id);
 }
 
 
+
+public function SDLog($id){
+    $model = new M_z();
+
+
+    // Menyusun data yang akan dimasukkan ke dalam database
+    $data = [
+
+        'delete' => date('Y-m-d H:i:s')
+    ];
+$where = array('id_activity' => $id);
+    // Menambahkan data buku ke dalam tabel 'buku'
+    $model->edit('activity', $data, $where);
+
+    // Mengalihkan ke halaman daftar buku setelah berhasil
+    return redirect()->to('home/LogActivity');
+}
 
 
 
@@ -1163,6 +1180,36 @@ public function EditBuku($id){
 }
 }
 
+public function EditBukuUser($id){
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->buku == 1) {
+    $model = new M_z();
+    $data['menus'] = $model->tampil('menu');
+    
+    // Ambil setting dari model
+    $where5 = array('id_setting' => 1);
+    $data['setting'] = $model->getwhere('setting', $where5);
+    $this->log_activity('User membuka Form Edit Buku');
+    
+    // Ambil kategori dari model
+    $where = array('deleted' => Null);
+    $where1 = array('id_buku' => $id);
+    $data['buku'] = $model->tampilwhere2Row('buku', $where, $where1);
+    $where5 = array('deleted' => null);
+    $data['kategori'] = $model->tampilwhere('kategori', $where5);
+
+    echo view('header', $data);
+    echo view('menu', $data);
+    echo view('editbukuuser', $data);
+    echo view('footer');
+}else{
+    return redirect()->to('home/login');
+}
+}
+
 public function aksi_edit_buku() {
     $model = new M_z();
     
@@ -1213,6 +1260,55 @@ public function aksi_edit_buku() {
     return redirect()->to('home/DataBuku')->with('message', 'Buku berhasil diperbarui');
 }
 
+public function aksi_edit_buku_user() {
+    $model = new M_z();
+    
+    // Ambil data dari form
+    $id_buku = $this->request->getPost('id_buku');
+    $kode_buku = $this->request->getPost('kode_buku');
+    $nama_buku = $this->request->getPost('nama_buku');
+    $pengarang = $this->request->getPost('pengarang');
+    $genre = $this->request->getPost('genre');
+    $penerbit = $this->request->getPost('penerbit');
+    $tahun_terbit = $this->request->getPost('tahun_terbit');
+    $kategori = $this->request->getPost('kategori');
+    
+    // Menyusun data yang akan diupdate
+    $data = [
+        'kode_buku' => $kode_buku,
+        'nama_buku' => $nama_buku,
+        'pengarang' => $pengarang,
+        'genre' => $genre,
+        'penerbit' => $penerbit,
+        'tahun_terbit' => $tahun_terbit,
+        'id_kategori' => $kategori,
+        'updated_at' => date('Y-m-d H:i:s')
+    ];
+
+    // Menangani upload file buku (jika ada)
+    $fileBuku = $this->request->getFile('file_buku');
+    if ($fileBuku && $fileBuku->isValid()) {
+        $newName = $fileBuku->getRandomName();
+        $fileBuku->move('uploads/buku', $newName);
+        $data['file_buku'] = 'foto/' . $newName;
+    }
+
+    // Menangani upload foto buku (jika ada)
+    $fotoBuku = $this->request->getFile('foto_buku');
+    if ($fotoBuku && $fotoBuku->isValid()) {
+        $newName = $fotoBuku->getRandomName();
+        $fotoBuku->move('uploads/foto_buku', $newName);
+        $data['foto_buku'] = 'foto/' . $newName;
+    }
+
+    $where = ['id_buku' => $id_buku];
+
+    // Menyimpan perubahan data buku ke dalam database
+    $model->edit('buku', $data, $where);
+
+    // Mengalihkan ke halaman daftar buku setelah berhasil
+    return redirect()->to('home/BukuUser')->with('message', 'Buku berhasil diperbarui');
+}
 
 
 public function SDBuku($id){

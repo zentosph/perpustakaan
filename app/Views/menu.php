@@ -108,6 +108,10 @@
         <!-- Menu Recycle Bin -->
         <li><a href="<?= base_url('home/RBuku') ?>"><i class="fa fa-book"></i>Buku</a></li>
         <li><a href="<?= base_url('home/RUser') ?>"><i class="fa fa-user"></i> User</a></li>
+
+        <li class="menu-separator" style="margin-left: 20px"><span>Log Activity</span></li>
+        <li><a href="<?= base_url('home/LogActivity') ?>"><i class="fa fa-book"></i>Log Activity</a></li>
+
     </ul>
 </li>
 

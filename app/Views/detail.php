@@ -67,9 +67,9 @@
         <!-- Back Button -->
         <div class="row mt-4">
             <div class="col-12 text-center">
-                <a href="<?= base_url('home/Buku') ?>" class="btn btn-secondary">
-                    Kembali ke Daftar Buku
-                </a>
+            <a href="javascript:history.back()" class="btn btn-secondary">
+    Kembali ke Daftar Buku
+</a>
                 <?php if ($buku->id_user == session()->get('id')): ?>
     <a href="<?= base_url('home/SDUBuku/' . $buku->id_buku) ?>" class="btn btn-danger btn-sm" 
        onclick="return confirmDelete()">

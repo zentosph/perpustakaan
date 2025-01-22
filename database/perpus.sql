@@ -11,7 +11,7 @@
  Target Server Version : 100424 (10.4.24-MariaDB)
  File Encoding         : 65001
 
- Date: 21/01/2025 13:58:48
+ Date: 22/01/2025 14:03:36
 */
 
 SET NAMES utf8mb4;
@@ -28,294 +28,26 @@ CREATE TABLE `activity`  (
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp,
   `delete` enum('0','1') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id_activity`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1759 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1853 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of activity
 -- ----------------------------
-INSERT INTO `activity` VALUES (1474, 1, 'User Melakukan Login', '2024-09-06 22:54:50', NULL);
-INSERT INTO `activity` VALUES (1475, 1, 'User membuka Dashboard', '2024-09-06 22:54:50', NULL);
-INSERT INTO `activity` VALUES (1476, 1, 'User membuka Dashboard', '2024-09-06 23:33:15', NULL);
-INSERT INTO `activity` VALUES (1477, 1, 'User membuka view userlog', '2024-09-06 23:33:19', NULL);
-INSERT INTO `activity` VALUES (1478, 1, 'User membuka view userlog', '2024-09-06 23:33:41', NULL);
-INSERT INTO `activity` VALUES (1479, 1, 'User membuka view userlog', '2024-09-06 23:35:18', NULL);
-INSERT INTO `activity` VALUES (1481, 1, 'User Menghapus data activity', '2024-09-06 23:45:25', NULL);
-INSERT INTO `activity` VALUES (1483, 1, 'User Menghapus data activity', '2024-09-06 23:45:29', NULL);
-INSERT INTO `activity` VALUES (1484, 1, 'User membuka view userlog', '2024-09-06 23:45:29', NULL);
-INSERT INTO `activity` VALUES (1485, 1, 'User membuka view userlog', '2024-09-06 23:46:05', NULL);
-INSERT INTO `activity` VALUES (1486, 4, 'User Melakukan Login', '2024-09-07 12:14:07', NULL);
-INSERT INTO `activity` VALUES (1487, 4, 'User membuka Dashboard', '2024-09-07 12:14:08', NULL);
-INSERT INTO `activity` VALUES (1488, 4, 'User Membuka Form Kasus', '2024-09-07 12:14:16', NULL);
-INSERT INTO `activity` VALUES (1489, 4, 'User Membuka Form Kasus', '2024-09-07 12:14:45', NULL);
-INSERT INTO `activity` VALUES (1490, 4, 'User Membuka Form Kasus', '2024-09-07 12:14:49', NULL);
-INSERT INTO `activity` VALUES (1491, 4, 'User Membuka View Kasus', '2024-09-07 12:14:50', NULL);
-INSERT INTO `activity` VALUES (1492, 4, 'User Membuka Form Kasus', '2024-09-07 12:14:52', NULL);
-INSERT INTO `activity` VALUES (1493, 4, 'User Melakukan Login', '2024-09-07 12:15:44', NULL);
-INSERT INTO `activity` VALUES (1494, 4, 'User membuka Dashboard', '2024-09-07 12:15:45', NULL);
-INSERT INTO `activity` VALUES (1495, 4, 'User Membuka Form Kasus', '2024-09-07 12:15:50', NULL);
-INSERT INTO `activity` VALUES (1496, 4, 'User Melakukan Menambahkan Kasus', '2024-09-07 12:16:11', NULL);
-INSERT INTO `activity` VALUES (1497, 4, 'User Membuka Form Kasus', '2024-09-07 12:16:11', NULL);
-INSERT INTO `activity` VALUES (1498, 4, 'User Membuka View Kasus', '2024-09-07 12:16:14', NULL);
-INSERT INTO `activity` VALUES (1499, 4, 'User Membuka Detail Kasus', '2024-09-07 12:16:24', NULL);
-INSERT INTO `activity` VALUES (1500, 4, 'User Membuka View Kasus', '2024-09-07 12:16:30', NULL);
-INSERT INTO `activity` VALUES (1501, 1, 'User Melakukan Login', '2024-09-07 12:16:52', NULL);
-INSERT INTO `activity` VALUES (1502, 1, 'User membuka Dashboard', '2024-09-07 12:16:53', NULL);
-INSERT INTO `activity` VALUES (1503, 1, 'User Membuka View Kasus', '2024-09-07 12:16:58', NULL);
-INSERT INTO `activity` VALUES (1504, 1, 'User Membuka Detail Kasus', '2024-09-07 12:17:05', NULL);
-INSERT INTO `activity` VALUES (1505, 1, 'User Mengubah status menjadi di Proses', '2024-09-07 12:17:13', NULL);
-INSERT INTO `activity` VALUES (1506, 1, 'User Membuka View Kasus', '2024-09-07 12:17:13', NULL);
-INSERT INTO `activity` VALUES (1507, 1, 'User Membuka Detail Kasus', '2024-09-07 12:17:20', NULL);
-INSERT INTO `activity` VALUES (1508, 1, 'User Mengubah status menjadi Proses ke Kepala Sekolah', '2024-09-07 12:17:33', NULL);
-INSERT INTO `activity` VALUES (1509, 1, 'User Membuka View Kasus', '2024-09-07 12:17:34', NULL);
-INSERT INTO `activity` VALUES (1510, 1, 'User Mengubah status menjadi Selesai', '2024-09-07 12:17:46', NULL);
-INSERT INTO `activity` VALUES (1511, 1, 'User Membuka View Kasus', '2024-09-07 12:17:46', NULL);
-INSERT INTO `activity` VALUES (1512, 1, 'User Soft Delete Kasus', '2024-09-07 12:17:56', NULL);
-INSERT INTO `activity` VALUES (1513, 1, 'User Membuka View Kasus', '2024-09-07 12:17:56', NULL);
-INSERT INTO `activity` VALUES (1514, 1, 'User Membuka Data Kasus', '2024-09-07 12:18:02', NULL);
-INSERT INTO `activity` VALUES (1515, 1, 'User Membuka View Skasus', '2024-09-07 12:18:08', NULL);
-INSERT INTO `activity` VALUES (1516, 1, 'User Restore Kasus', '2024-09-07 12:18:16', NULL);
-INSERT INTO `activity` VALUES (1517, 1, 'User Membuka View Skasus', '2024-09-07 12:18:17', NULL);
-INSERT INTO `activity` VALUES (1518, 1, 'User Membuka View Suser', '2024-09-07 12:18:24', NULL);
-INSERT INTO `activity` VALUES (1519, 1, 'User Membuka View User', '2024-09-07 12:18:29', NULL);
-INSERT INTO `activity` VALUES (1520, 1, 'User Membuka Detail User', '2024-09-07 12:18:40', NULL);
-INSERT INTO `activity` VALUES (1521, 1, 'User Mengedit User', '2024-09-07 12:18:48', NULL);
-INSERT INTO `activity` VALUES (1522, 1, 'User Membuka Detail User', '2024-09-07 12:18:48', NULL);
-INSERT INTO `activity` VALUES (1523, 1, 'User Membuka View User', '2024-09-07 12:18:54', NULL);
-INSERT INTO `activity` VALUES (1524, 1, 'User Restore Edit User', '2024-09-07 12:19:02', NULL);
-INSERT INTO `activity` VALUES (1525, 1, 'User Membuka View User', '2024-09-07 12:19:03', NULL);
-INSERT INTO `activity` VALUES (1526, 1, 'User Membuka Setting', '2024-09-07 12:19:24', NULL);
-INSERT INTO `activity` VALUES (1527, 1, 'User Mengedit Setting', '2024-09-07 12:19:33', NULL);
-INSERT INTO `activity` VALUES (1528, 1, 'User Membuka Setting', '2024-09-07 12:19:33', NULL);
-INSERT INTO `activity` VALUES (1529, 1, 'User Membuka Manage Menu', '2024-09-07 12:19:42', NULL);
-INSERT INTO `activity` VALUES (1530, 1, 'User Mengedit Menu', '2024-09-07 12:19:54', NULL);
-INSERT INTO `activity` VALUES (1531, 1, 'User Membuka Manage Menu', '2024-09-07 12:19:55', NULL);
-INSERT INTO `activity` VALUES (1532, 1, 'User membuka view userlog', '2024-09-07 12:20:02', NULL);
-INSERT INTO `activity` VALUES (1533, 1, 'User Membuka Manage Menu', '2024-09-07 12:20:26', NULL);
-INSERT INTO `activity` VALUES (1534, 4, 'User Melakukan Login', '2024-09-07 12:20:50', NULL);
-INSERT INTO `activity` VALUES (1535, 4, 'User membuka Dashboard', '2024-09-07 12:20:51', NULL);
-INSERT INTO `activity` VALUES (1536, 4, 'User Membuka Profile', '2024-09-07 12:21:01', NULL);
-INSERT INTO `activity` VALUES (1537, 4, 'User membuka Dashboard', '2024-09-07 12:21:11', NULL);
-INSERT INTO `activity` VALUES (1538, 1, 'User Melakukan Login', '2024-09-09 09:04:14', NULL);
-INSERT INTO `activity` VALUES (1539, 1, 'User membuka Dashboard', '2024-09-09 09:04:14', NULL);
-INSERT INTO `activity` VALUES (1540, NULL, 'User membuka Setting Website', '2025-01-20 06:06:32', NULL);
-INSERT INTO `activity` VALUES (1541, NULL, 'User membuka Setting Website', '2025-01-20 06:12:24', NULL);
-INSERT INTO `activity` VALUES (1542, NULL, 'User membuka Setting Website', '2025-01-20 06:20:29', NULL);
-INSERT INTO `activity` VALUES (1543, NULL, 'User membuka Setting Website', '2025-01-20 06:22:59', NULL);
-INSERT INTO `activity` VALUES (1544, NULL, 'User membuka Setting Website', '2025-01-20 06:23:15', NULL);
-INSERT INTO `activity` VALUES (1545, NULL, 'User membuka Setting Website', '2025-01-20 06:25:18', NULL);
-INSERT INTO `activity` VALUES (1546, NULL, 'User membuka Setting Website', '2025-01-20 06:25:59', NULL);
-INSERT INTO `activity` VALUES (1547, NULL, 'User membuka Setting Website', '2025-01-20 06:35:35', NULL);
-INSERT INTO `activity` VALUES (1548, NULL, 'User membuka Setting Website', '2025-01-20 06:40:48', NULL);
-INSERT INTO `activity` VALUES (1549, NULL, 'User membuka Setting Website', '2025-01-20 06:43:55', NULL);
-INSERT INTO `activity` VALUES (1550, NULL, 'User membuka Setting Website', '2025-01-20 06:45:33', NULL);
-INSERT INTO `activity` VALUES (1551, NULL, 'User membuka Setting Website', '2025-01-20 06:45:39', NULL);
-INSERT INTO `activity` VALUES (1552, NULL, 'User membuka Setting Website', '2025-01-20 06:45:51', NULL);
-INSERT INTO `activity` VALUES (1553, NULL, 'User membuka Setting Website', '2025-01-20 06:50:34', NULL);
-INSERT INTO `activity` VALUES (1554, NULL, 'User membuka Setting Website', '2025-01-20 06:50:36', NULL);
-INSERT INTO `activity` VALUES (1555, NULL, 'User membuka Setting Website', '2025-01-20 06:55:05', NULL);
-INSERT INTO `activity` VALUES (1556, NULL, 'User membuka Setting Website', '2025-01-20 06:55:10', NULL);
-INSERT INTO `activity` VALUES (1557, NULL, 'User membuka Setting Website', '2025-01-20 06:55:12', NULL);
-INSERT INTO `activity` VALUES (1558, NULL, 'User membuka Setting Website', '2025-01-20 06:55:17', NULL);
-INSERT INTO `activity` VALUES (1559, NULL, 'User membuka Daftar Buku', '2025-01-20 07:07:23', NULL);
-INSERT INTO `activity` VALUES (1560, NULL, 'User membuka Kategori', '2025-01-20 07:07:30', NULL);
-INSERT INTO `activity` VALUES (1561, NULL, 'User membuka Kategori', '2025-01-20 07:08:03', NULL);
-INSERT INTO `activity` VALUES (1562, NULL, 'User membuka Kategori', '2025-01-20 07:09:19', NULL);
-INSERT INTO `activity` VALUES (1563, NULL, 'User membuka Kategori', '2025-01-20 07:09:27', NULL);
-INSERT INTO `activity` VALUES (1564, NULL, 'User membuka Kategori', '2025-01-20 07:13:13', NULL);
-INSERT INTO `activity` VALUES (1565, NULL, 'User membuka Kategori', '2025-01-20 07:17:48', NULL);
-INSERT INTO `activity` VALUES (1566, NULL, 'User membuka Kategori', '2025-01-20 07:18:04', NULL);
-INSERT INTO `activity` VALUES (1567, NULL, 'User membuka Kategori', '2025-01-20 07:18:12', NULL);
-INSERT INTO `activity` VALUES (1568, NULL, 'User membuka Kategori', '2025-01-20 07:20:11', NULL);
-INSERT INTO `activity` VALUES (1569, NULL, 'User membuka Kategori', '2025-01-20 07:26:42', NULL);
-INSERT INTO `activity` VALUES (1570, NULL, 'User membuka Kategori', '2025-01-20 07:27:56', NULL);
-INSERT INTO `activity` VALUES (1571, NULL, 'User membuka Kategori', '2025-01-20 07:28:07', NULL);
-INSERT INTO `activity` VALUES (1572, NULL, 'User membuka Kategori', '2025-01-20 07:28:21', NULL);
-INSERT INTO `activity` VALUES (1573, NULL, 'User membuka Kategori', '2025-01-20 07:28:26', NULL);
-INSERT INTO `activity` VALUES (1574, NULL, 'User membuka Kategori', '2025-01-20 07:32:15', NULL);
-INSERT INTO `activity` VALUES (1575, NULL, 'User membuka Kategori', '2025-01-20 07:32:45', NULL);
-INSERT INTO `activity` VALUES (1576, NULL, 'User membuka Kategori', '2025-01-20 07:32:50', NULL);
-INSERT INTO `activity` VALUES (1577, NULL, 'User membuka Kategori', '2025-01-20 07:32:52', NULL);
-INSERT INTO `activity` VALUES (1578, NULL, 'User membuka Kategori', '2025-01-20 07:32:55', NULL);
-INSERT INTO `activity` VALUES (1579, NULL, 'User membuka Kategori', '2025-01-20 07:37:56', NULL);
-INSERT INTO `activity` VALUES (1580, NULL, 'User membuka Kategori', '2025-01-20 07:38:05', NULL);
-INSERT INTO `activity` VALUES (1581, NULL, 'User membuka Kategori', '2025-01-20 07:54:30', NULL);
-INSERT INTO `activity` VALUES (1582, NULL, 'User membuka Kategori', '2025-01-20 07:55:02', NULL);
-INSERT INTO `activity` VALUES (1583, NULL, 'User membuka Kategori', '2025-01-20 07:55:16', NULL);
-INSERT INTO `activity` VALUES (1584, NULL, 'User membuka Kategori', '2025-01-20 07:56:23', NULL);
-INSERT INTO `activity` VALUES (1585, NULL, 'User membuka Kategori', '2025-01-20 07:59:14', NULL);
-INSERT INTO `activity` VALUES (1586, NULL, 'User membuka Kategori', '2025-01-20 07:59:15', NULL);
-INSERT INTO `activity` VALUES (1587, NULL, 'User membuka Kategori', '2025-01-20 07:59:27', NULL);
-INSERT INTO `activity` VALUES (1588, NULL, 'User membuka Kategori', '2025-01-20 07:59:51', NULL);
-INSERT INTO `activity` VALUES (1589, NULL, 'User membuka Kategori', '2025-01-20 07:59:56', NULL);
-INSERT INTO `activity` VALUES (1590, NULL, 'User membuka Kategori', '2025-01-20 07:59:58', NULL);
-INSERT INTO `activity` VALUES (1591, NULL, 'User membuka Kategori', '2025-01-20 08:00:03', NULL);
-INSERT INTO `activity` VALUES (1592, NULL, 'User membuka Kategori', '2025-01-20 08:01:42', NULL);
-INSERT INTO `activity` VALUES (1593, NULL, 'User membuka Kategori', '2025-01-20 08:01:48', NULL);
-INSERT INTO `activity` VALUES (1594, NULL, 'User membuka Kategori', '2025-01-20 08:01:53', NULL);
-INSERT INTO `activity` VALUES (1595, NULL, 'User membuka Kategori', '2025-01-20 08:02:04', NULL);
-INSERT INTO `activity` VALUES (1596, NULL, 'User membuka Kategori', '2025-01-20 08:02:21', NULL);
-INSERT INTO `activity` VALUES (1597, NULL, 'User membuka Kategori', '2025-01-20 08:03:41', NULL);
-INSERT INTO `activity` VALUES (1598, NULL, 'User membuka Kategori', '2025-01-20 08:03:54', NULL);
-INSERT INTO `activity` VALUES (1599, NULL, 'User membuka Kategori', '2025-01-20 08:10:28', NULL);
-INSERT INTO `activity` VALUES (1600, NULL, 'User membuka Kategori', '2025-01-20 08:10:31', NULL);
-INSERT INTO `activity` VALUES (1601, NULL, 'User membuka Kategori', '2025-01-20 08:10:46', NULL);
-INSERT INTO `activity` VALUES (1602, NULL, 'User membuka Kategori', '2025-01-20 08:14:09', NULL);
-INSERT INTO `activity` VALUES (1603, NULL, 'User membuka Kategori', '2025-01-20 08:14:10', NULL);
-INSERT INTO `activity` VALUES (1604, NULL, 'User membuka Kategori', '2025-01-20 08:14:46', NULL);
-INSERT INTO `activity` VALUES (1605, NULL, 'User membuka Kategori', '2025-01-20 08:16:25', NULL);
-INSERT INTO `activity` VALUES (1606, NULL, 'User membuka Kategori', '2025-01-20 08:16:33', NULL);
-INSERT INTO `activity` VALUES (1607, NULL, 'User membuka Kategori', '2025-01-20 08:18:51', NULL);
-INSERT INTO `activity` VALUES (1608, NULL, 'User membuka Kategori', '2025-01-20 08:19:08', NULL);
-INSERT INTO `activity` VALUES (1609, NULL, 'User membuka Kategori', '2025-01-20 08:19:15', NULL);
-INSERT INTO `activity` VALUES (1610, NULL, 'User membuka Kategori', '2025-01-20 08:19:16', NULL);
-INSERT INTO `activity` VALUES (1611, NULL, 'User membuka Kategori', '2025-01-20 08:20:54', NULL);
-INSERT INTO `activity` VALUES (1612, NULL, 'User membuka Kategori', '2025-01-20 08:20:57', NULL);
-INSERT INTO `activity` VALUES (1613, NULL, 'User membuka Kategori', '2025-01-20 08:21:15', NULL);
-INSERT INTO `activity` VALUES (1614, NULL, 'User membuka Kategori', '2025-01-20 08:21:53', NULL);
-INSERT INTO `activity` VALUES (1615, NULL, 'User membuka Kategori', '2025-01-20 08:26:23', NULL);
-INSERT INTO `activity` VALUES (1616, NULL, 'User membuka Daftar Buku', '2025-01-20 08:29:03', NULL);
-INSERT INTO `activity` VALUES (1617, NULL, 'User membuka Kategori', '2025-01-20 08:29:12', NULL);
-INSERT INTO `activity` VALUES (1618, NULL, 'User membuka Kategori', '2025-01-20 08:48:33', NULL);
-INSERT INTO `activity` VALUES (1619, NULL, 'User membuka Kategori', '2025-01-20 08:51:24', NULL);
-INSERT INTO `activity` VALUES (1620, NULL, 'User membuka Kategori', '2025-01-20 08:51:50', NULL);
-INSERT INTO `activity` VALUES (1621, NULL, 'User membuka Kategori', '2025-01-20 08:52:00', NULL);
-INSERT INTO `activity` VALUES (1622, NULL, 'User membuka Kategori', '2025-01-20 08:52:14', NULL);
-INSERT INTO `activity` VALUES (1623, NULL, 'User membuka Kategori', '2025-01-20 08:57:37', NULL);
-INSERT INTO `activity` VALUES (1624, NULL, 'User membuka Kategori', '2025-01-20 09:02:51', NULL);
-INSERT INTO `activity` VALUES (1625, NULL, 'User membuka Kategori', '2025-01-20 09:03:04', NULL);
-INSERT INTO `activity` VALUES (1626, NULL, 'User membuka Kategori', '2025-01-20 09:03:22', NULL);
-INSERT INTO `activity` VALUES (1627, NULL, 'User membuka Kategori', '2025-01-20 09:11:18', NULL);
-INSERT INTO `activity` VALUES (1628, NULL, 'User membuka Kategori', '2025-01-20 09:11:38', NULL);
-INSERT INTO `activity` VALUES (1629, NULL, 'User membuka Kategori', '2025-01-20 09:11:43', NULL);
-INSERT INTO `activity` VALUES (1630, NULL, 'User membuka Kategori', '2025-01-20 09:11:52', NULL);
-INSERT INTO `activity` VALUES (1631, NULL, 'User membuka Kategori', '2025-01-20 09:12:54', NULL);
-INSERT INTO `activity` VALUES (1632, NULL, 'User membuka Kategori', '2025-01-20 09:12:59', NULL);
-INSERT INTO `activity` VALUES (1633, NULL, 'User membuka Kategori', '2025-01-20 09:13:11', NULL);
-INSERT INTO `activity` VALUES (1634, NULL, 'User membuka Kategori', '2025-01-20 09:13:35', NULL);
-INSERT INTO `activity` VALUES (1635, NULL, 'User membuka Daftar Buku', '2025-01-20 20:03:50', NULL);
-INSERT INTO `activity` VALUES (1636, NULL, 'User membuka Form Buku', '2025-01-20 20:06:23', NULL);
-INSERT INTO `activity` VALUES (1637, NULL, 'User membuka Daftar Buku', '2025-01-20 20:06:29', NULL);
-INSERT INTO `activity` VALUES (1638, NULL, 'User membuka Detail Buku', '2025-01-20 20:07:48', NULL);
-INSERT INTO `activity` VALUES (1639, NULL, 'User membuka Daftar Buku', '2025-01-20 20:07:53', NULL);
-INSERT INTO `activity` VALUES (1640, NULL, 'User membuka Daftar Buku', '2025-01-20 20:25:44', NULL);
-INSERT INTO `activity` VALUES (1641, NULL, 'User membuka Daftar Buku', '2025-01-20 20:29:19', NULL);
-INSERT INTO `activity` VALUES (1642, 1, 'User membuka Daftar Buku', '2025-01-20 20:32:50', NULL);
-INSERT INTO `activity` VALUES (1643, 1, 'User membuka Daftar Buku', '2025-01-20 20:33:11', NULL);
-INSERT INTO `activity` VALUES (1644, 7, 'User membuka Daftar Buku', '2025-01-20 20:37:40', NULL);
-INSERT INTO `activity` VALUES (1645, 7, 'User membuka Form Buku', '2025-01-20 20:37:42', NULL);
-INSERT INTO `activity` VALUES (1646, 7, 'User membuka Daftar Buku', '2025-01-20 20:39:23', NULL);
-INSERT INTO `activity` VALUES (1647, 7, 'User membuka Daftar Buku', '2025-01-20 20:39:27', NULL);
-INSERT INTO `activity` VALUES (1648, 7, 'User membuka Daftar Buku', '2025-01-20 20:39:42', NULL);
-INSERT INTO `activity` VALUES (1649, 7, 'User membuka Form Buku', '2025-01-20 20:39:44', NULL);
-INSERT INTO `activity` VALUES (1650, 7, 'User membuka Daftar Buku', '2025-01-20 20:40:05', NULL);
-INSERT INTO `activity` VALUES (1651, 7, 'User membuka Daftar Buku', '2025-01-20 20:40:48', NULL);
-INSERT INTO `activity` VALUES (1652, 7, 'User membuka Form Buku', '2025-01-20 20:40:49', NULL);
-INSERT INTO `activity` VALUES (1653, 7, 'User membuka Daftar Buku', '2025-01-20 20:41:17', NULL);
-INSERT INTO `activity` VALUES (1654, 7, 'User membuka Detail Buku', '2025-01-20 20:41:27', NULL);
-INSERT INTO `activity` VALUES (1655, 7, 'User membuka Detail Buku', '2025-01-20 20:41:28', NULL);
-INSERT INTO `activity` VALUES (1656, 7, 'User membuka Daftar Buku', '2025-01-20 20:41:30', NULL);
-INSERT INTO `activity` VALUES (1657, 7, 'User membuka Daftar Buku', '2025-01-20 20:41:52', NULL);
-INSERT INTO `activity` VALUES (1658, 7, 'User membuka Daftar Buku', '2025-01-20 20:42:01', NULL);
-INSERT INTO `activity` VALUES (1659, 7, 'User membuka Detail Buku', '2025-01-20 20:45:25', NULL);
-INSERT INTO `activity` VALUES (1660, 7, 'User membuka Daftar Buku', '2025-01-20 20:45:28', NULL);
-INSERT INTO `activity` VALUES (1661, 7, 'User membuka Form Buku', '2025-01-20 20:45:35', NULL);
-INSERT INTO `activity` VALUES (1662, 7, 'User membuka Form Buku', '2025-01-20 20:47:36', NULL);
-INSERT INTO `activity` VALUES (1663, 7, 'User membuka Daftar Buku', '2025-01-20 20:48:00', NULL);
-INSERT INTO `activity` VALUES (1664, 7, 'User membuka Detail Buku', '2025-01-20 20:48:07', NULL);
-INSERT INTO `activity` VALUES (1665, 7, 'User membuka Daftar Buku', '2025-01-20 20:48:10', NULL);
-INSERT INTO `activity` VALUES (1666, 7, 'User membuka Form Buku', '2025-01-20 20:48:12', NULL);
-INSERT INTO `activity` VALUES (1667, 7, 'User membuka Daftar Buku', '2025-01-20 20:48:34', NULL);
-INSERT INTO `activity` VALUES (1668, 7, 'User membuka Detail Buku', '2025-01-20 20:48:38', NULL);
-INSERT INTO `activity` VALUES (1669, 7, 'User membuka Daftar Buku', '2025-01-20 20:48:43', NULL);
-INSERT INTO `activity` VALUES (1670, 7, 'User membuka Detail Buku', '2025-01-20 20:48:58', NULL);
-INSERT INTO `activity` VALUES (1671, 7, 'User membuka Daftar Buku', '2025-01-20 20:49:25', NULL);
-INSERT INTO `activity` VALUES (1672, 7, 'User membuka Kategori', '2025-01-20 20:58:28', NULL);
-INSERT INTO `activity` VALUES (1673, 7, 'User membuka Daftar Buku', '2025-01-20 20:58:38', NULL);
-INSERT INTO `activity` VALUES (1674, 7, 'User membuka Kategori', '2025-01-20 20:58:42', NULL);
-INSERT INTO `activity` VALUES (1675, 7, 'User membuka Form Buku', '2025-01-20 20:58:44', NULL);
-INSERT INTO `activity` VALUES (1676, 7, 'User membuka Daftar Buku', '2025-01-20 21:01:07', NULL);
-INSERT INTO `activity` VALUES (1677, 7, 'User membuka Kategori', '2025-01-20 21:01:32', NULL);
-INSERT INTO `activity` VALUES (1678, 7, 'User membuka Kategori', '2025-01-20 21:01:37', NULL);
-INSERT INTO `activity` VALUES (1679, 7, 'User membuka Daftar Buku', '2025-01-20 23:53:38', NULL);
-INSERT INTO `activity` VALUES (1680, 7, 'User membuka Form Buku', '2025-01-20 23:53:39', NULL);
-INSERT INTO `activity` VALUES (1681, 7, 'User membuka Form Buku', '2025-01-20 23:54:42', NULL);
-INSERT INTO `activity` VALUES (1682, 7, 'User membuka Form Buku', '2025-01-20 23:56:39', NULL);
-INSERT INTO `activity` VALUES (1683, 7, 'User membuka Daftar Buku', '2025-01-20 23:57:12', NULL);
-INSERT INTO `activity` VALUES (1684, 7, 'User membuka Detail Buku', '2025-01-20 23:57:16', NULL);
-INSERT INTO `activity` VALUES (1685, 7, 'User membuka Detail Buku', '2025-01-20 23:57:38', NULL);
-INSERT INTO `activity` VALUES (1686, 7, 'User membuka Detail Buku', '2025-01-20 23:57:44', NULL);
-INSERT INTO `activity` VALUES (1687, 7, 'User membuka Daftar Buku', '2025-01-20 23:57:46', NULL);
-INSERT INTO `activity` VALUES (1688, 7, 'User membuka Detail Buku', '2025-01-20 23:57:48', NULL);
-INSERT INTO `activity` VALUES (1689, 7, 'User membuka Daftar Buku', '2025-01-20 23:59:43', NULL);
-INSERT INTO `activity` VALUES (1690, 7, 'User membuka Daftar Buku', '2025-01-21 00:00:01', NULL);
-INSERT INTO `activity` VALUES (1691, 7, 'User membuka Daftar Buku', '2025-01-21 00:00:13', NULL);
-INSERT INTO `activity` VALUES (1692, 7, 'User membuka Daftar Buku', '2025-01-21 00:06:56', NULL);
-INSERT INTO `activity` VALUES (1693, 7, 'User membuka Daftar Buku', '2025-01-21 00:07:48', NULL);
-INSERT INTO `activity` VALUES (1694, 7, 'User membuka Daftar Buku', '2025-01-21 00:08:33', NULL);
-INSERT INTO `activity` VALUES (1695, 7, 'User membuka Daftar Buku', '2025-01-21 00:09:03', NULL);
-INSERT INTO `activity` VALUES (1696, 7, 'User membuka Daftar Buku', '2025-01-21 00:09:27', NULL);
-INSERT INTO `activity` VALUES (1697, 7, 'User membuka Daftar Buku', '2025-01-21 00:10:05', NULL);
-INSERT INTO `activity` VALUES (1698, 7, 'User membuka Daftar Buku', '2025-01-21 00:13:23', NULL);
-INSERT INTO `activity` VALUES (1699, 7, 'User membuka Daftar Buku', '2025-01-21 00:13:29', NULL);
-INSERT INTO `activity` VALUES (1700, 7, 'User membuka Daftar Buku', '2025-01-21 00:13:41', NULL);
-INSERT INTO `activity` VALUES (1701, 7, 'User membuka Daftar Buku', '2025-01-21 00:15:34', NULL);
-INSERT INTO `activity` VALUES (1702, 7, 'User membuka Detail Buku', '2025-01-21 00:15:49', NULL);
-INSERT INTO `activity` VALUES (1703, 7, 'User membuka Daftar Buku', '2025-01-21 00:15:54', NULL);
-INSERT INTO `activity` VALUES (1704, 7, 'User membuka Daftar Buku', '2025-01-21 00:16:53', NULL);
-INSERT INTO `activity` VALUES (1705, 7, 'User membuka Form Buku', '2025-01-21 00:16:58', NULL);
-INSERT INTO `activity` VALUES (1706, 7, 'User membuka Daftar Buku', '2025-01-21 00:17:35', NULL);
-INSERT INTO `activity` VALUES (1707, 7, 'User membuka Detail Buku', '2025-01-21 00:17:37', NULL);
-INSERT INTO `activity` VALUES (1708, 7, 'User membuka Detail Buku', '2025-01-21 00:18:24', NULL);
-INSERT INTO `activity` VALUES (1709, 7, 'User membuka Daftar Buku', '2025-01-21 00:18:35', NULL);
-INSERT INTO `activity` VALUES (1710, 7, 'User membuka Daftar Buku', '2025-01-21 00:18:45', NULL);
-INSERT INTO `activity` VALUES (1711, 7, 'User membuka Daftar Buku', '2025-01-21 00:19:50', NULL);
-INSERT INTO `activity` VALUES (1712, 7, 'User membuka Detail Buku', '2025-01-21 00:19:51', NULL);
-INSERT INTO `activity` VALUES (1713, 7, 'User membuka Detail Buku', '2025-01-21 00:20:46', NULL);
-INSERT INTO `activity` VALUES (1714, 7, 'User membuka Detail Buku', '2025-01-21 00:21:00', NULL);
-INSERT INTO `activity` VALUES (1715, 7, 'User membuka Detail Buku', '2025-01-21 00:21:46', NULL);
-INSERT INTO `activity` VALUES (1716, 7, 'User membuka Kategori', '2025-01-21 00:21:51', NULL);
-INSERT INTO `activity` VALUES (1717, 7, 'User membuka Daftar Buku', '2025-01-21 00:22:02', NULL);
-INSERT INTO `activity` VALUES (1718, 7, 'User membuka Detail Buku', '2025-01-21 00:22:28', NULL);
-INSERT INTO `activity` VALUES (1719, 7, 'User membuka Daftar Buku', '2025-01-21 00:22:32', NULL);
-INSERT INTO `activity` VALUES (1720, 7, 'User membuka Daftar Buku', '2025-01-21 00:23:15', NULL);
-INSERT INTO `activity` VALUES (1721, 7, 'User membuka Daftar Buku', '2025-01-21 00:24:44', NULL);
-INSERT INTO `activity` VALUES (1722, 7, 'User membuka Daftar Buku', '2025-01-21 00:25:00', NULL);
-INSERT INTO `activity` VALUES (1723, 7, 'User membuka Daftar Buku', '2025-01-21 00:25:07', NULL);
-INSERT INTO `activity` VALUES (1724, 7, 'User membuka Daftar Buku', '2025-01-21 00:25:14', NULL);
-INSERT INTO `activity` VALUES (1725, 7, 'User membuka Daftar Buku', '2025-01-21 00:25:16', NULL);
-INSERT INTO `activity` VALUES (1726, 7, 'User membuka Daftar Buku', '2025-01-21 00:25:38', NULL);
-INSERT INTO `activity` VALUES (1727, 7, 'User membuka Daftar Buku', '2025-01-21 00:25:51', NULL);
-INSERT INTO `activity` VALUES (1728, 7, 'User membuka Daftar Buku', '2025-01-21 00:26:19', NULL);
-INSERT INTO `activity` VALUES (1729, 7, 'User membuka Daftar Buku', '2025-01-21 00:27:12', NULL);
-INSERT INTO `activity` VALUES (1730, 7, 'User membuka Daftar Buku', '2025-01-21 00:27:24', NULL);
-INSERT INTO `activity` VALUES (1731, 7, 'User membuka Setting Website', '2025-01-21 00:27:28', NULL);
-INSERT INTO `activity` VALUES (1732, 7, 'User membuka Daftar Buku', '2025-01-21 00:29:40', NULL);
-INSERT INTO `activity` VALUES (1733, 7, 'User membuka Setting Website', '2025-01-21 00:29:44', NULL);
-INSERT INTO `activity` VALUES (1734, 7, 'User membuka Setting Website', '2025-01-21 00:29:57', NULL);
-INSERT INTO `activity` VALUES (1735, 7, 'User membuka Setting Website', '2025-01-21 00:30:50', NULL);
-INSERT INTO `activity` VALUES (1736, 7, 'User membuka Setting Website', '2025-01-21 00:33:08', NULL);
-INSERT INTO `activity` VALUES (1737, 7, 'User membuka Setting Website', '2025-01-21 00:34:32', NULL);
-INSERT INTO `activity` VALUES (1738, 7, 'User membuka Setting Website', '2025-01-21 00:34:36', NULL);
-INSERT INTO `activity` VALUES (1739, 7, 'User membuka Setting Website', '2025-01-21 00:34:43', NULL);
-INSERT INTO `activity` VALUES (1740, 7, 'User membuka Setting Website', '2025-01-21 00:35:18', NULL);
-INSERT INTO `activity` VALUES (1741, 7, 'User membuka Setting Website', '2025-01-21 00:36:36', NULL);
-INSERT INTO `activity` VALUES (1742, 7, 'User membuka Setting Website', '2025-01-21 00:36:44', NULL);
-INSERT INTO `activity` VALUES (1743, 7, 'User membuka Setting Website', '2025-01-21 00:36:52', NULL);
-INSERT INTO `activity` VALUES (1744, 7, 'User membuka Manage Menu', '2025-01-21 00:42:01', NULL);
-INSERT INTO `activity` VALUES (1745, 7, 'User membuka Manage Menu', '2025-01-21 00:42:33', NULL);
-INSERT INTO `activity` VALUES (1746, 7, 'User membuka Manage Menu', '2025-01-21 00:43:26', NULL);
-INSERT INTO `activity` VALUES (1747, 7, 'User membuka Manage Menu', '2025-01-21 00:43:59', NULL);
-INSERT INTO `activity` VALUES (1748, 7, 'User membuka Manage Menu', '2025-01-21 00:44:32', NULL);
-INSERT INTO `activity` VALUES (1749, 7, 'User membuka Manage Menu', '2025-01-21 00:44:51', NULL);
-INSERT INTO `activity` VALUES (1750, 7, 'User membuka Manage Menu', '2025-01-21 00:45:19', NULL);
-INSERT INTO `activity` VALUES (1751, 7, 'User membuka Manage Menu', '2025-01-21 00:47:07', NULL);
-INSERT INTO `activity` VALUES (1752, 7, 'User membuka Manage Menu', '2025-01-21 00:49:22', NULL);
-INSERT INTO `activity` VALUES (1753, 7, 'User membuka Manage Menu', '2025-01-21 00:49:34', NULL);
-INSERT INTO `activity` VALUES (1754, 7, 'User membuka Manage Menu', '2025-01-21 00:49:49', NULL);
-INSERT INTO `activity` VALUES (1755, 7, 'User membuka Kategori', '2025-01-21 00:50:02', NULL);
-INSERT INTO `activity` VALUES (1756, 7, 'User membuka Kategori', '2025-01-21 00:50:11', NULL);
-INSERT INTO `activity` VALUES (1757, 7, 'User membuka Kategori', '2025-01-21 00:50:22', NULL);
-INSERT INTO `activity` VALUES (1758, 7, 'User membuka Daftar Buku', '2025-01-21 00:50:27', NULL);
+INSERT INTO `activity` VALUES (1838, 7, 'User membuka Daftar Buku', '2025-01-22 00:15:18', NULL);
+INSERT INTO `activity` VALUES (1839, 7, 'User membuka Daftar Buku', '2025-01-22 00:15:40', NULL);
+INSERT INTO `activity` VALUES (1840, 7, 'User membuka Setting Website', '2025-01-22 00:15:49', NULL);
+INSERT INTO `activity` VALUES (1841, 7, 'User membuka Daftar Buku', '2025-01-22 00:16:06', NULL);
+INSERT INTO `activity` VALUES (1842, 7, 'User membuka Daftar Buku', '2025-01-22 00:16:08', NULL);
+INSERT INTO `activity` VALUES (1843, 7, 'User membuka Setting Website', '2025-01-22 00:16:12', NULL);
+INSERT INTO `activity` VALUES (1844, 7, 'User membuka Setting Website', '2025-01-22 00:16:51', NULL);
+INSERT INTO `activity` VALUES (1845, 7, 'User membuka Setting Website', '2025-01-22 00:18:14', NULL);
+INSERT INTO `activity` VALUES (1846, 7, 'User membuka Setting Website', '2025-01-22 00:18:30', NULL);
+INSERT INTO `activity` VALUES (1847, 7, 'User membuka Setting Website', '2025-01-22 00:18:34', NULL);
+INSERT INTO `activity` VALUES (1848, 7, 'User membuka Setting Website', '2025-01-22 00:18:38', NULL);
+INSERT INTO `activity` VALUES (1849, 7, 'User membuka Setting Website', '2025-01-22 00:21:12', NULL);
+INSERT INTO `activity` VALUES (1850, 7, 'User membuka Setting Website', '2025-01-22 00:21:25', NULL);
+INSERT INTO `activity` VALUES (1851, 7, 'User membuka Setting Website', '2025-01-22 00:21:29', NULL);
+INSERT INTO `activity` VALUES (1852, 7, 'User membuka Setting Website', '2025-01-22 00:21:47', NULL);
 
 -- ----------------------------
 -- Table structure for activity_logs
@@ -1427,14 +1159,15 @@ CREATE TABLE `buku`  (
   `updated_at` datetime NULL DEFAULT NULL,
   `deleted` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id_buku`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of buku
 -- ----------------------------
 INSERT INTO `buku` VALUES (1, 2, 7, 'A13O', 'Leo', 'Leo', 'Horror', 'Leo', '2025-01-20', 'why.jpg', 'why.jpg', NULL, NULL, '2025-01-20 09:11:51', '2025-01-21 00:21:50');
-INSERT INTO `buku` VALUES (2, 2, 7, 'A13OP', 'apa kek', 'Leo', 'Horror', 'Leo', '2025-01-20', 'why.jpg', 'why.jpg', NULL, NULL, NULL, '2025-01-21 00:22:32');
+INSERT INTO `buku` VALUES (2, 2, 7, 'A13OP', 'apa kek', 'Leo', 'Horror', 'Leo', '2025-01-20', 'why.jpg', 'why.jpg', NULL, NULL, '2025-01-22 00:10:18', NULL);
 INSERT INTO `buku` VALUES (15, 1, 7, 'BKU000001', 'buku terbaru', 'leonardo', 'Fiksi Ilmiah, Fantasi, Horor, Misteri, Komedi, Biografi dan Otobiografi, Sains dan Teknologi, Filsafat, Agama dan Spiritual, Pendidikan, Komik dan Manga, Puisi dan Sastra, Referensi', 'hai', '2012-12-12', 'layar lab komputer.png', 'layar lab komputer.png', '2025-01-21', NULL, NULL, NULL);
+INSERT INTO `buku` VALUES (16, 1, 7, 'BKU000002', 'hai', 'hai', 'Fiksi Ilmiah, Horor, Komedi', 'hai', '2025-01-22', 'perpus.sql', 'covGRM-096.jpg', '2025-01-21', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for genre
@@ -1521,22 +1254,19 @@ INSERT INTO `kelas` VALUES (4, 'AKL XII', NULL, '2025-01-20 08:00:02', NULL, NUL
 DROP TABLE IF EXISTS `menu`;
 CREATE TABLE `menu`  (
   `id_menu` int NOT NULL AUTO_INCREMENT,
-  `level` int NULL DEFAULT NULL,
-  `surat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `data` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `level` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `buku` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `datamaster` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `setting` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `folder` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `datas` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id_menu`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of menu
 -- ----------------------------
-INSERT INTO `menu` VALUES (1, 1, '1', '1', '1', '1', '1');
-INSERT INTO `menu` VALUES (2, 2, '1', '1', '1', '1', '1');
-INSERT INTO `menu` VALUES (3, 3, '1', '1', '1', '1', '1');
-INSERT INTO `menu` VALUES (4, 4, '1', '1', '1', '0', '0');
+INSERT INTO `menu` VALUES (1, 'Admin', '1', '1', '1');
+INSERT INTO `menu` VALUES (2, 'Petugas', '1', '1', '1');
+INSERT INTO `menu` VALUES (3, 'Siswa', '1', '1', '0');
 
 -- ----------------------------
 -- Table structure for permissions
@@ -1551,17 +1281,16 @@ CREATE TABLE `permissions`  (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `permissions_user_level_menu_unique`(`user_level` ASC, `menu` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 117 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 120 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of permissions
 -- ----------------------------
 INSERT INTO `permissions` VALUES (76, 'Admin', 'setting', 1, '2024-11-10 14:58:14', '2025-01-15 09:03:18');
-INSERT INTO `permissions` VALUES (112, 'Admin', 'Dashboard', 1, '2025-01-15 09:03:06', '2025-01-15 09:03:18');
-INSERT INTO `permissions` VALUES (113, 'Admin', 'Play', 1, '2025-01-15 09:03:06', '2025-01-15 09:03:18');
-INSERT INTO `permissions` VALUES (114, 'Petugas', 'Dashboard', 1, '2025-01-15 09:03:24', '2025-01-15 09:03:24');
-INSERT INTO `permissions` VALUES (115, 'Petugas', 'Setting', 0, '2025-01-15 09:03:24', '2025-01-15 09:03:24');
-INSERT INTO `permissions` VALUES (116, 'Petugas', 'Play', 1, '2025-01-15 09:03:24', '2025-01-15 09:03:24');
+INSERT INTO `permissions` VALUES (112, 'Admin', 'buku', 1, '2025-01-15 09:03:06', '2025-01-15 09:03:18');
+INSERT INTO `permissions` VALUES (117, 'Siswa', 'buku', 1, '2025-01-22 09:12:17', '2025-01-22 09:12:19');
+INSERT INTO `permissions` VALUES (118, 'Admin', 'datamaster', 1, '2025-01-22 09:14:57', NULL);
+INSERT INTO `permissions` VALUES (119, 'Siswa', 'datamaster', 1, '2025-01-22 09:18:54', NULL);
 
 -- ----------------------------
 -- Table structure for setting

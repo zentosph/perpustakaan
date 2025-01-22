@@ -29,28 +29,28 @@
         <?php if (isset($buku) && count($buku) > 0): ?>
             <?php foreach ($buku as $bk): ?>
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <a href="<?= base_url('home/DetailBuku/' . $bk->id_buku) ?>">
-                        <div class="card">
-                            <img 
-                                src="<?= base_url('foto/' . $bk->foto_buku) ?>" 
-                                class="card-img-top" 
-                                alt="<?= $bk->nama_buku ?>" 
-                                style="height: 250px; object-fit: cover;"
-                            >
-                            
-                            <div class="card-body text-center">
-                                <h5 class="card-title"><?= $bk->nama_buku ?></h5>
-                            </div>
-                            <a 
-                        href="<?= base_url('home/EditBuku/' . $bk->id_buku) ?>" 
-                        class="btn btn-sm btn-warning" 
-                        title="Edit Buku"
-                    >
-                        <i class="fa fa-edit"></i>
-                    </a>
-                        </div>
-                    </a>
-                </div>
+    <div class="card" style="position: relative;">
+        <a href="<?= base_url('home/DetailBuku/' . $bk->id_buku) ?>">
+            <img 
+                src="<?= base_url('foto/' . $bk->foto_buku) ?>" 
+                class="card-img-top" 
+                alt="<?= $bk->nama_buku ?>" 
+                style="height: 250px; object-fit: cover;"
+            >
+        </a>
+        <div class="card-body text-center">
+            <h5 class="card-title"><?= $bk->nama_buku ?></h5>
+        </div>
+        <a 
+            href="<?= base_url('home/EditBukuUser/' . $bk->id_buku) ?>" 
+            class="btn btn-sm btn-warning" 
+            title="Edit Buku" 
+            style="position: absolute; bottom: 10px; right: 10px;"
+        >
+            <i class="fa fa-edit"></i>
+        </a>
+    </div>
+</div>
             <?php endforeach; ?>
         <?php else: ?>
             <div class="col-12">
