@@ -87,27 +87,39 @@
                     <li class="nav-label first">Main Menu</li>
 
                     <li><a href="<?= base_url('home') ?>" aria-expanded="false"><i class="fa fa-tachometer-alt"></i><span class="nav-text">Dashboard</span></a></li> 
-
-<li><a href="<?= base_url('home/Buku') ?>" aria-expanded="false"><i class="fa fa-book"></i><span class="nav-text">Buku</span></a></li> 
-
+                    
+<?php if ($menu->buku == 1) { ?>
+    <li><a href="<?= base_url('home/Buku') ?>" aria-expanded="false"><i class="fa fa-book"></i><span class="nav-text">Buku</span></a></li> 
+<?php } ?>
 <li><a href="<?= base_url('home/BukuUser') ?>" aria-expanded="false"><i class="fa fa-users"></i><span class="nav-text">Buku User</span></a></li> 
 
-<li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="fas fa-cogs"></i><span class="nav-text">Data Master</span></a>
+<?php if ($menu->datamaster == 1) { ?>
+    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="fas fa-cogs"></i><span class="nav-text">Data Master</span></a>
     <ul aria-expanded="false">
+        <!-- Menu utama -->
         <li><a href="<?= base_url('home/DataBuku') ?>"><i class="fa fa-book"></i> Buku</a></li>
         <li><a href="<?= base_url('home/Kategori') ?>"><i class="fa fa-tags"></i> Kategori</a></li>
         <li><a href="<?= base_url('home/Kelas') ?>"><i class="fa fa-chalkboard-teacher"></i> Kelas</a></li>
         <li><a href="<?= base_url('home/User') ?>"><i class="fa fa-user"></i> User</a></li>
+
+        <!-- Separator -->
+        <li class="menu-separator" style="margin-left: 20px"><span>Recycle Bin</span></li>
+
+        <!-- Menu Recycle Bin -->
+        <li><a href="<?= base_url('home/RBuku') ?>"><i class="fa fa-book"></i>Buku</a></li>
+        <li><a href="<?= base_url('home/RUser') ?>"><i class="fa fa-user"></i> User</a></li>
     </ul>
 </li>
 
+<?php } ?>
+<?php if ($menu->setting == 1) { ?>
 <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="fa fa-cog"></i><span class="nav-text">Setting</span></a>
     <ul aria-expanded="false">
         <li><a href="<?= base_url('home/Website') ?>">Website</a></li>
         <li><a href="<?= base_url('home/MenuManage') ?>">Menu Manage</a></li>
     </ul>
 </li>
-
+<?php } ?>
                     <!-- <li><a href="<?=base_url('home/Folder_Dokumen')?>" aria-expanded="false"><i class="fas fa-folder-open"></i><span
                                 class="nav-text">E-Folder</span></a></li>                
 

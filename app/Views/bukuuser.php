@@ -37,9 +37,17 @@
                                 alt="<?= $bk->nama_buku ?>" 
                                 style="height: 250px; object-fit: cover;"
                             >
+                            
                             <div class="card-body text-center">
                                 <h5 class="card-title"><?= $bk->nama_buku ?></h5>
                             </div>
+                            <a 
+                        href="<?= base_url('home/EditBuku/' . $bk->id_buku) ?>" 
+                        class="btn btn-sm btn-warning" 
+                        title="Edit Buku"
+                    >
+                        <i class="fa fa-edit"></i>
+                    </a>
                         </div>
                     </a>
                 </div>

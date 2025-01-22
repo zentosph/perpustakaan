@@ -8,9 +8,12 @@ class Home extends BaseController
 {
 	public function index()
 	{
+        $model = new M_z();
+        $where6 = array('level' => session()->get('level'));
+        $data['menu'] = $model->getwhere('menu', $where6);
         if (session()->get('id') > 0) {
 		echo view('header');
-		echo view('menu');
+		echo view('menu',$data);
 		echo view('footer');
         }else{
             return redirect()->to('home/login');
@@ -315,11 +318,15 @@ public function Website(){
 }
 
 public function MenuManage(){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->setting == 1) {
     $model = new M_z();
     $where5 = array('id_setting' => 1);
     $data['setting'] = $model->getwhere('setting', $where5);
-        $data['menus'] = $model->tampil('permissions');
+    $data['menus'] = $model->tampil('menu');
         $this->log_activity('User membuka Manage Menu');
     echo view('header', $data);
     echo view('menu', $data);
@@ -332,9 +339,12 @@ public function MenuManage(){
 
 public function Buku()
 {
-    if (session()->get('id') > 0) {
     $model = new M_z();
-    $data['menus'] = $model->tampil('menu');
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->buku == 1) {
+        
 
     // Ambil setting dari model
     $where5 = array('id_setting' => 1);
@@ -398,7 +408,11 @@ public function getbukukategori($id = null)
 
 
 public function DetailBuku($id){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->buku == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -454,7 +468,11 @@ public function getbuku()
 
 
 public function TambahBuku(){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->buku == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -557,7 +575,11 @@ public function aksi_tambah_buku()
 
 
 public function Kategori(){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -581,7 +603,11 @@ public function Kategori(){
 }
 
 public function TambahKategori(){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -625,7 +651,11 @@ public function aksi_tambah_kategori(){
 }
 
 public function EditKategori($id){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -691,7 +721,11 @@ $where = array('id_kategori' => $id);
 
 
 public function Kelas(){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -715,7 +749,11 @@ public function Kelas(){
 }
 
 public function TambahKelas(){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -759,7 +797,11 @@ public function aksi_tambah_kelas(){
 }
 
 public function EditKelas($id){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -825,7 +867,11 @@ $where = array('id_kelas' => $id);
 
 
 public function User(){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -848,8 +894,40 @@ public function User(){
 }
 }
 
+public function RUser(){
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
+    $model = new M_z();
+    $data['menus'] = $model->tampil('menu');
+    
+    // Ambil setting dari model
+    $where5 = array('id_setting' => 1);
+    $data['setting'] = $model->getwhere('setting', $where5);
+    $this->log_activity('User membuka Kategori');
+    
+    // Ambil kategori dari model
+    $where = "deleted is not null";
+    $data['user'] = $model->tampilwhere('user', $where);
+
+
+    echo view('header', $data);
+    echo view('menu', $data);
+    echo view('ruser', $data);
+    echo view('footer');
+}else{
+    return redirect()->to('home/login');
+}
+}
+
 public function TambahUser(){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -901,7 +979,11 @@ public function aksi_tambah_User() {
 }
 
 public function EditUser($id){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -976,12 +1058,31 @@ $where = array('id_user' => $id);
     return redirect()->to('home/User');
 }
 
+public function RDUser($id){
+    $model = new M_z();
 
+
+    // Menyusun data yang akan dimasukkan ke dalam database
+    $data = [
+
+        'deleted' => null
+    ];
+$where = array('id_user' => $id);
+    // Menambahkan data buku ke dalam tabel 'buku'
+    $model->edit('user', $data, $where);
+
+    // Mengalihkan ke halaman daftar buku setelah berhasil
+    return redirect()->to('home/RUser');
+}
 
 
 
 public function DataBuku(){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -1004,10 +1105,40 @@ public function DataBuku(){
 }
 }
 
+public function RBuku(){
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
+    $model = new M_z();
+    $data['menus'] = $model->tampil('menu');
+    
+    // Ambil setting dari model
+    $where5 = array('id_setting' => 1);
+    $data['setting'] = $model->getwhere('setting', $where5);
+    $this->log_activity('User membuka Kategori');
+    
+    // Ambil kategori dari model
+    $where = "deleted is not null";
+    $data['Buku'] = $model->tampilwhere('Buku', $where);
 
+
+    echo view('header', $data);
+    echo view('menu', $data);
+    echo view('rdatabuku', $data);
+    echo view('footer');
+}else{
+    return redirect()->to('home/login');
+}
+}
 
 public function EditBuku($id){
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->datamaster == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
     
@@ -1101,6 +1232,23 @@ $where = array('id_buku' => $id);
     return redirect()->to('home/DataBuku');
 }
 
+public function RDBuku($id){
+    $model = new M_z();
+
+
+    // Menyusun data yang akan dimasukkan ke dalam database
+    $data = [
+
+        'deleted' => null
+    ];
+$where = array('id_buku' => $id);
+    // Menambahkan data buku ke dalam tabel 'buku'
+    $model->edit('buku', $data, $where);
+
+    // Mengalihkan ke halaman daftar buku setelah berhasil
+    return redirect()->to('home/RBuku');
+}
+
 public function SDUBuku($id){
     $model = new M_z();
 
@@ -1122,7 +1270,11 @@ $where = array('id_buku' => $id);
 
 public function BukuUser()
 {
-    if (session()->get('id') > 0) {
+    $model = new M_z();
+    $where6 = array('level' => session()->get('level'));
+    $data['menu'] = $model->getwhere('menu', $where6);
+   
+    if ($data['menu']->buku == 1) {
     $model = new M_z();
     $data['menus'] = $model->tampil('menu');
 
